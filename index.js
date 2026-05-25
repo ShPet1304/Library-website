@@ -1,5 +1,6 @@
 const container = document.querySelector(".card-container");
 const form = document.querySelector("#bookForm");
+const formData = document.querySelector(".form-container");
 
 let newtitle;
 let newauthor;
@@ -32,6 +33,7 @@ function Book(title, author, pages, read) {
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   addBookToLibrary();
+  formData.reset();
 });
 //Object.setPrototypeOf(addBookToLibrary.prototype, Book.prototype);
 
@@ -45,19 +47,18 @@ function addBookToLibrary() {
   newtitle = bookTitle.value;
   newauthor = bookAuthor.value;
   newpages = bookPages.value;
-  newread = bookRead.value;
+  newread = bookRead.checked ? "read" : "unread";
 
   myLibrary.push(new Book(newtitle, newauthor, newpages, newread));
-
   DisplayBooks();
 }
 
 function openForm() {
-  document.getElementById("bookForm").style.display = "block";
+  form.style.display = "block";
 }
 
 function closeForm() {
-  document.getElementById("bookForm").style.display = "none";
+  form.style.display = "none";
 }
 
 function DisplayBooks() {

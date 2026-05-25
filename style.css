@@ -141,8 +141,8 @@ h1 {
   bottom: 0;
   max-width: 300px;
   right: 15px;
-  border: 3px solid #2a2a2a;
-  box-shadow: 1px 1px 8px 2px #daa520;
+  border: 3px solid #555;
+  box-shadow: 1px 1px 8px 2px #1c1c1c;
   border-radius: 8px;
   z-index: 9;
 }
@@ -165,7 +165,7 @@ input[type="number"] {
   margin: 10px;
   border: none;
   border-radius: 3px;
-  background: #2a2a2a;
+  background: #f5e8d8;
 }
 
 .form-container .btn {
@@ -188,4 +188,9 @@ input[type="number"] {
 .form-container .btn:hover,
 .open-button:hover {
   opacity: 1;
+}
+
+.form-read {
+  color: #f5e8d8;
+  padding-bottom: 20px;
 }

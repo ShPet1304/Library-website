@@ -14,7 +14,7 @@
     <button class="form-button" onclick="openForm()">Add Book</button>
     <div class="add-book-form" id="bookForm">
       <h2 class="form-heading">Add Book</h2>
-      <form class="form-container">
+      <form class="form-container" autocomplete="off">
         <label for="title"></label>
         <input
           type="text"
@@ -42,8 +42,9 @@
           name="pages"
           required
         />
-        <label for="read" class="form-read"> </label><br />
+
         <input type="checkbox" id="read" name="read" />
+        <label for="read" class="form-read">I have read this book</label>
 
         <button type="submit" class="btn">Add</button>
         <button type="button" class="btn cancel" onclick="closeForm()">
