@@ -35,10 +35,9 @@ form.addEventListener("submit", (event) => {
   addBookToLibrary();
   formData.reset();
 });
-//Object.setPrototypeOf(addBookToLibrary.prototype, Book.prototype);
+
 
 function addBookToLibrary() {
-  // take params, create a book then store it in the array
   const bookTitle = document.getElementById("title");
   const bookAuthor = document.getElementById("author");
   const bookPages = document.getElementById("pages");
